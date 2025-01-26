@@ -107,6 +107,8 @@ void playMorseForWord(const char *wrd)
 }
 void setup()
 {
+  randomSeed(analogRead(A0));
+  
   Serial.begin(115200);
   while (!Serial)
     ;
@@ -134,11 +136,21 @@ void loop()
   if (wordInProgress && millis() - lastSymTime >= interWordLen)
   {
     wordInProgress = false;
-    if (wordPracticeMode && morseWord == testWord)
+    if (wordPracticeMode)
     {
-      playMorseForWord("R");
-      delay(2000);
-      playOutAWord();
+      if (morseWord == testWord)
+      {
+        playMorseForWord("R");
+        delay(2000);
+        playOutAWord();
+      }
+      else
+      {
+        Serial.println();
+        delay(1000);
+        Serial.println(testWord);
+        playMorseForWord(testWord);
+      }
     }
     morseWord = "";
     Serial.println();
