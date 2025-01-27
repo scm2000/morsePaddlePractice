@@ -9,10 +9,11 @@
 ///
 // Micro         Jack
 // -----|     _____________
-// GND  |-----|sleeve      \_
-// GPIO |-----|tip           |
-// GPIO |-----|ring         /
-// -----|     |____________|
+//      |     |           |
+// GND  |-----|sleeve      \
+// GPIO |-----|tip          |
+// GPIO |-----|ring        /
+// -----|     |___________|
 
 // Wiring for passive buzzer
 //
