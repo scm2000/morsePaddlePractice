@@ -15,7 +15,7 @@
 // GPIO |-----|ring        /
 // -----|     |___________|
 
-// Wiring for passive buzzer
+// Wiring for active buzzer
 //
 // Micro          Module
 // -----|      _______________
