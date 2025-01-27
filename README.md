@@ -1,5 +1,7 @@
 This project makes a Morse Code practice oscillator out of an arduino compatible micro controller,
-a stero jack and a passive buzzer. The code, as checked in, is targeted to the Teensy 4.1 controller.
+a stero jack and a buzzer. The code, as checked in, is targeted to the Teensy 4.1 controller.
+The code is set up for a 3 pin active buzzer that is active low, simple changes can be made for active high buzzers,
+and 3 pin passive buzzers can also be used.
 
 With simple wiring of the parts (in comments in main.cpp), and some simple software
 it impelemnts an Iambic-A code practice oscillator.  
