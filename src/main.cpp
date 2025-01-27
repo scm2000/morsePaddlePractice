@@ -4,6 +4,25 @@
 #include <string>
 #include "main.h"
 
+
+//// Wiring for Stero Jack
+///
+// Micro         Jack
+// -----|     _____________
+// GND  |-----|sleeve      \_
+// GPIO |-----|tip           |
+// GPIO |-----|ring         /
+// -----|     |____________|
+
+// Wiring for passive buzzer
+//
+// Micro          Module
+// -----|      _______________
+// 3.3v |-----| Vcc          |
+// GPIO |-----| IO           |
+// GND  |-----| GND          |
+// -----|     |______________|
+
 unsigned long WPM = 15;
 unsigned long dotLen = 1200 / WPM;
 unsigned long dashLen = 3 * dotLen;
@@ -108,7 +127,7 @@ void playMorseForWord(const char *wrd)
 void setup()
 {
   randomSeed(analogRead(A0));
-  
+
   Serial.begin(115200);
   while (!Serial)
     ;
